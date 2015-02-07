@@ -1,0 +1,41 @@
+html { overflow-y: scroll; }
+html, body { min-height: 100%; }
+/* Put your CSS here */
+.ember-application {
+    margin: 0 0 90px;
+}
+
+#wrapper { padding: 20px; }
+
+#letters { margin: 0; padding: 0; display: inline; }
+#letters li { display: inline; }
+#letters li a { margin-right: 5px; }
+.ole { background: green; }
+.not-ole { background: red; }
+.pageTitle { font-size: 2.8em; margin: 0 0 20px; }
+.artist { margin: 20px 0 0; font-size: 1.7em; color: #111; }
+.songTitle { margin: 0 0 3px; font-size: 1.5em; color: #555; }
+.albumTitle { margin: 0; font-size: 1.2em; color: #999; }
+
+a.active { font-weight: bold; color: black; }
+a.active:hover { color: black; text-decoration: none; }
+
+#footer { position: fixed; width: 100%; bottom: 0; background: #16161d; padding: 10px; border-top: solid 1px #111; color: white; }
+
+.pace .pace-progress {
+	background: #d02226;
+	position: fixed;
+	z-index: 2000;
+	top: 0;
+	left: 0;
+	height: 2px;
+
+	-webkit-transition: width 1s;
+	-moz-transition: width 1s;
+	-o-transition: width 1s;
+	transition: width 1s;
+}
+
+.pace-inactive {
+	display: none;
+}
