@@ -24,39 +24,7 @@ App.Router.map(function() {
 		});
 	});
 	this.resource('search', { path: '/search/:kwd' });
-	/*
-	this.resource('lyric', { path: '/lyric/:song' }, function() {
-		this.route('add');
-		this.route('edit', { path: '/lyric/edit/:song' });
-	});
-	*/
 });
-
-/*
-App.Store = DS.Store.extend({
-	revision: 11,
-	host: 'http://rudikovac.com/playground/ember'
-});
-
-App.Artist = DS.Model.extend({
-	initial: DS.attr(),
-	artists: DS.attr()
-});
-
-App.ApplicationAdapter = DS.RESTAdapter.extend({
-	host: 'http://rudikovac.com/playground/ember'
-});
-
-App.ApplicationRoute = Ember.Route.extend({
-	model: function() {
-		return this.store.find('artist');
-	}
-});
-
-App.IndexRoute = Ember.Route.extend({
-	
-});
-*/
 
 App.Artist = Ember.Object.extend();
 App.Artist.reopenClass({
@@ -106,9 +74,6 @@ App.ApplicationController = Ember.Controller.extend({
 
 App.BrowseRoute = Ember.Route.extend({
 	model: function(params) {
-		/*return $.get("http://zapoj.me/ajax.php?bands").then(function(data) {
-			return { "initial": params.letter, "initials": data.initials[params.letter] };
-		});*/
 		return App.Artist.artists(params.letter);
 	}
 });
